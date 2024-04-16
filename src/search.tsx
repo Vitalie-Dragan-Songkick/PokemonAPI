@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { TERipple } from 'tw-elements-react';
+import React from 'react';
 
 interface SearchProps {
-  value: string;
+  value?: string;
   searchTerm: string;
-  // setSearchTerm: string;
-  onChange: (value: string) => void;
+  setSearchTerm: (term: string) => void;
+  onChange?: (value: string) => void;
 }
 
 export default function SearchBasicExample({ searchTerm, setSearchTerm }: SearchProps): JSX.Element {
@@ -27,8 +26,6 @@ export default function SearchBasicExample({ searchTerm, setSearchTerm }: Search
         />
         {/*SMALL SCREEN   w-80 */}
 
-        {/* <!--Search button--> */}
-        {/* <TERipple color='light'> */}
         <button
           className="mt-6 mb-6 relative z-[2] flex items-center rounded-r bg-primary px-6 py-2 text-xs font-medium uppercase leading-tight bg-neutral-400"
           type="button"
@@ -47,7 +44,6 @@ export default function SearchBasicExample({ searchTerm, setSearchTerm }: Search
             />
           </svg>
         </button>
-        {/* </TERipple> */}
       </div>
     </div>
   );

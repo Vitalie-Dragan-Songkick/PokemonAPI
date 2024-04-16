@@ -17,7 +17,7 @@ interface Pokemon {
 const App: React.FC = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>('');
-  
+
   useEffect(() => {
     async function fetchPokemons() {
       try {
@@ -54,8 +54,6 @@ const App: React.FC = () => {
   const filteredPokemons = pokemons.filter(pokemon =>
     pokemon.name.toUpperCase().includes(searchTerm.toUpperCase()),
   );
-  // console.log(filteredPokemons.map(pokemon => pokemon.name));
-  // console.log(filteredPokemons.map(pokemon => pokemon.url));
 
   return (
     <>
@@ -63,7 +61,7 @@ const App: React.FC = () => {
         <img src='public/img/logo.png' alt='Logo' className='size-2/12 mr-2 sm:mr-4 sm:size-1/12' /> {/*SMALL SCREEN   size-4/12 */}
         <span className='font-bold mr-1 sm:mr-2'>Pokeverse</span>  | All Pokemon
       </h1>
-      <SearchBasicExample searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> {/* DISPLAY CENTER */}
+      <SearchBasicExample searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
 
       <div className='grid grid-cols-1 sm:grid-cols-4'>
