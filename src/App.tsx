@@ -58,7 +58,7 @@ const App: React.FC = () => {
   return (
     <>
       <h1 className='flex items-center text-1xl sm:text-2xl bg-stone-700 w-full text-white p-2'> {/*SMALL SCREEN   size-4/12 */}
-        <img src='public/img/logo.png' alt='Logo' className='size-2/12 mr-2 sm:mr-4 sm:size-1/12' /> {/*SMALL SCREEN   size-4/12 */}
+        <img src='/img/logo.png' alt='Logo' className='size-2/12 mr-2 sm:mr-4 sm:size-1/12' /> {/*SMALL SCREEN   size-4/12 */}
         <span className='font-bold mr-1 sm:mr-2'>Pokeverse</span>  | All Pokemon
       </h1>
       <SearchBasicExample searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
