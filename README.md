@@ -9,4 +9,3 @@
 ## See it deployed
 
 [https://vitalie-dragan-pokemon.netlify.app/](https://vitalie-dragan-pokemon.netlify.app/)
-# PokemonAPI
