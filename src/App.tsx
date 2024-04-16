@@ -34,8 +34,8 @@ const App: React.FC = () => {
           const pokemonData = await pokemonResponse.json();
             return {
               name: pokemonData.name,
-              image: pokemonData.sprites.other['official-artwork'].front_default,
-              // image: pokemonData.sprites.versions['generation-v']['black-white']['animated'].front_default,
+              // image: pokemonData.sprites.other['official-artwork'].front_default,
+              image: pokemonData.sprites.versions['generation-v']['black-white']['animated'].front_default,
               natural_gift_power: pokemonData.natural_gift_power,
               type: pokemonData.types.map((type: any) => type.type.name).join(', '),
               id: pokemonData.id,
@@ -64,16 +64,16 @@ const App: React.FC = () => {
       <SearchBasicExample searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
 
-      <div className='grid grid-cols-1 sm:grid-cols-4'>
+      <div className='grid grid-cols-2 sm:grid-cols-5'>
         {filteredPokemons.map((pokemon, index) => (
-          <div className="grid items-center justify-items-center m-4 py-8 px-0 max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-6" key={index}>
-            <img src={pokemon.image} alt={pokemon.name} className="rounded-lg  w-4/5 h-4/5 pt-0 border-t-0 scale-150" />
-            <div className='justify-items-left text-4xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-pink-900 to-red-500'>{pokemon.name.toLocaleUpperCase()}</div>
+          <div className="grid items-center justify-items-center w-36 m-4 py-4 px-4 max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-6" key={index}>
+            <img src={pokemon.image} alt={pokemon.name} className="rounded-lg w-1/2 h-auto pt-0 border-t-0" />
+            <div className='justify-items-left text-lg font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-pink-900 to-red-500'>{pokemon.name.toLocaleUpperCase()}</div>
             {/* <div className='justify-items-left '>Level: {pokemon.natural_gift_power}</div> */}
 
 
-            <button className=" px-8 py-2 text-sm text-pink-600 font-bold rounded-lg border border-purple-200 hover:text-white  hover:bg-pink-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 ease-in-out duration-300">
-              Find Out More
+            <button className="px-6 py-1 text-xs text-pink-600 font-semibold rounded-lg border border-purple-200 hover:text-white  hover:bg-pink-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 ease-in-out duration-300">
+              More
             </button>
           </div>
         ))}
