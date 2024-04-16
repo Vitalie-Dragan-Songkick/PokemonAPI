@@ -66,7 +66,7 @@ const App: React.FC = () => {
 
       <div className='grid grid-cols-1 sm:grid-cols-4'>
         {filteredPokemons.map((pokemon, index) => (
-          <div className="grid items-center justify-items-center m-4 py-8 px-0 max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-6" key={index}>
+          <div className="grid items-center justify-items-center w-2/3 m-4 py-8 px-0 max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-6" key={index}>
             <img src={pokemon.image} alt={pokemon.name} className="rounded-lg  w-4/5 h-4/5 pt-0 border-t-0 scale-150" />
             <div className='justify-items-left text-4xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-pink-900 to-red-500'>{pokemon.name.toLocaleUpperCase()}</div>
             {/* <div className='justify-items-left '>Level: {pokemon.natural_gift_power}</div> */}
